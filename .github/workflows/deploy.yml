@@ -25,4 +25,4 @@ jobs:
             cd /home/ubuntu/RecoopeCompose/ApiLog
             git pull origin main
             cd ..
-            ./deploy.sh"
+            bash ./deploy.sh"
