@@ -4,26 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
-
-import java.time.LocalDateTime;
-import java.util.Map;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "user_logs")
-public class Log {
+@Document(collection = "actions")
+public class Action {
     @MongoId
     private String _id;
-
-    private String companyId;
-
-    private String action_Id;
-
-    private Map<String, Object> data;
-
-    private LocalDateTime timestamp = LocalDateTime.now();
+    private String action;
 }
