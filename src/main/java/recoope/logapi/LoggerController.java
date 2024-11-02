@@ -1,7 +1,6 @@
 package recoope.logapi;
 
 import io.swagger.v3.oas.annotations.Operation;
-import org.bson.types.ObjectId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +30,7 @@ public class LoggerController {
             actionRepository.save(action);
         }
 
-        Log log = new Log(UUID.randomUUID().toString(), logDTO.getCompanyId(), action.get_id(), logDTO.getData(), LocalDateTime.now());
+        Log log = new Log(UUID.randomUUID().toString(), logDTO.getCompanyId(), action.get_id(), LocalDateTime.now());
         logRepository.save(log);
         return ResponseEntity.ok(log);
     }

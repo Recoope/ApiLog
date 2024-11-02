@@ -23,7 +23,5 @@ public class Log {
 
     private String action_Id;
 
-    private Map<String, Object> data;
-
     private LocalDateTime timestamp = LocalDateTime.now();
 }
