@@ -14,5 +14,4 @@ import java.util.Map;
 public class LogDTO {
     private String companyId;
     private String action;
-    private Map<String, Object> data;
 }
